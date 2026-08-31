@@ -7,7 +7,16 @@ public class Kata {
   public static void main(String[] args) {
     System.out.println("Kata Training!");
 
+    System.out.println(bmi(80.0, 1.8));
+  }
+
+  public static String bmi(double w, double h) {
+    double bmi = w/(h*h);
     
+    if(bmi <= 18.5) return "Underweight";
+    if(bmi <= 25.0) return "Normal";
+    if(bmi <= 30)   return "Overweight";
+    return "Obese";
   }
 
   public static int[] deleteNth(int[] elements, int max) {
