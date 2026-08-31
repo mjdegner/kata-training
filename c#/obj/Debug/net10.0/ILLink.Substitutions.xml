@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="Kata">
+    <resource name="FSharpSignatureData.Kata" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.Kata" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.Kata" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.Kata" action="remove"></resource>
+    <resource name="FSharpOptimizationData.Kata" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.Kata" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.Kata" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.Kata" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.Kata" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.Kata" action="remove"></resource>
+  </assembly>
+</linker>

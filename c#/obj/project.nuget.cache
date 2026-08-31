@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6xDmNcwyR5o=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Michael\\Documents\\Repo\\Kata\\Kata.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Michael\\.nuget\\packages\\fsharp.core\\10.0.101\\fsharp.core.10.0.101.nupkg.sha512"
+  ],
+  "logs": []
+}
