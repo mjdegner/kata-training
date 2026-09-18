@@ -1,14 +1,27 @@
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Kata {
   
   public static void main(String[] args) {
     System.out.println("Kata Training!");
-
-    System.out.println(bmi(80.0, 1.8));
+    System.out.println(capitals("CodEWaRs"));
   }
+
+  public static int[] capitals(String s){
+    List<Integer> indices = new ArrayList<>();
+    for (int i = 0; i < s.length(); i++) {
+      if(Character.isUpperCase(s.charAt(i))) indices.add(i);
+    }
+    return indices.stream().mapToInt(i->i).toArray();
+  }
+
+  public static long sumTwoSmallestNumbers(long[] numbers) {
+    Arrays.sort(numbers);
+    return numbers[0] + numbers[1]; 
+  }  
 
   public static String bmi(double w, double h) {
     double bmi = w/(h*h);
