@@ -7,7 +7,68 @@ public class Kata {
   
   public static void main(String[] args) {
     System.out.println("Kata Training!");
-    System.out.println(capitals("CodEWaRs"));
+    System.out.println(decode(".... . -.--   .--- ..- -.. ."));
+  }
+
+  public static int[] take(int[] arr, int n) {
+    int length = n < arr.length ? n : arr.length;
+    int[] sub = new int[length];
+
+    for (int i = 0; i < sub.length; i++) {
+      sub[i] = arr[i];
+    }
+
+    return sub;
+  }
+
+  public static int[] take2(int[] arr, int n) {
+    return n > arr.length ? arr : Arrays.copyOf(arr, n);
+  }
+
+  public static String decode(String morseCode) {
+    String[] words = morseCode.trim().split("  ");
+    List<String> result = new ArrayList<String>();
+
+    for (String word : words) {
+      String currentWord = "";
+      for (String morse : word.trim().split("\\s+")) {
+        // currentWord += MorseCode.get(morse);
+      }
+      result.add(currentWord);
+    }
+    return String.join(" ", result);
+  }
+
+  public static String decode2(String morseCode) { 
+    String result = "";
+    for (String word : morseCode.trim().split("   ")) {
+        for (String morse : word.split("\\s+")) {
+        // result += MorseCode.get(morse);
+      }
+      result += " ";
+    }
+    return result.trim();
+  }
+
+  // public static String decode3(String morseCode) { 
+  //   return Arrays.stream(morseCode.trim().split("   "))
+  //         .map(Kata::decodeWord)
+  //         .collect(Collectors.joining(" "));
+  // }
+  // private static String decodeWord(String word) {
+  //   return Arrays.stream(word.split(" "))
+  //         .map(MorseCode::get)
+  //         .collect(Collectors.joining());
+  // }
+
+  public static String whoLikesIt(String... names) {
+    return switch (names.length) {
+      case 0 -> "no one likes this";
+      case 1 -> String.format("%s likes this", names[0]);
+      case 2 -> String.format("%s and %s like this", names[0], names[1]);
+      case 3 -> String.format("%s, %s and %s like this", names[0], names[1], names[2]);
+      default -> String.format("%s, %s and %d others like this", names[0], names[1], names.length - 2);
+    };
   }
 
   public static int[] capitals(String s){
